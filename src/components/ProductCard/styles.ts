@@ -8,15 +8,20 @@ const flexCenterStyle = css`
 `;
 
 export const ProductCardContainer = styled.li`
-  width: 20%;
+  width: 100%;
   padding: 1rem 0;
-  margin: 0 2rem 3rem 0;
+  margin-bottom: 1rem;
   list-style: none;
   border: 0.0625rem solid #ccc;
   border-radius: 0.8rem;
 
-  &:nth-child(4n) {
-    margin-right: 0;
+  @media (min-width: 40rem) {
+    width: 20%;
+    margin: 0 2rem 3rem 0;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
   }
 `;
 

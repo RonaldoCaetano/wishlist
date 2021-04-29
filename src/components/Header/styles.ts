@@ -12,16 +12,22 @@ export const HeaderContainer = styled.header`
   @media (min-width: 40rem) {
     justify-content: space-between;
     flex-direction: row;
-    align-items: center;
   }
 `;
 
 export const HeaderContent = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 
-  ${Container}
+  @media (min-width: 640px) {
+    ${Container}
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 `;
 
 export const ContainerTitle = styled.h1`
@@ -31,12 +37,18 @@ export const ContainerTitle = styled.h1`
 
 export const SectionLeft = styled.section`
   display: flex;
-  width: 30%;
+
+  @media (min-width: 40rem) {
+    width: 30%;
+  }
 `;
 
 export const SectionRight = styled.section`
   flex-direction: column;
-  width: 70%;
+
+  @media (min-width: 40rem) {
+    width: 70%;
+  }
 `;
 
 export const Services = styled.div`
@@ -58,6 +70,7 @@ export const ServicesTitle = styled.p`
   align-items: center;
 
   a {
+    font-size: 1.5rem;
     color: #fff;
     text-decoration: none;
   }
@@ -69,13 +82,22 @@ export const ServicesTitle = styled.p`
 
 export const SearchBarContainer = styled.div`
   padding: 0 0.675rem;
-  margin-top: 0.625rem;
+  margin-top: 1rem;
+  position: relative;
+
+  span {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
   input {
     width: 100%;
-    height: 3.75rem;
+    height: 50px;
     border: none;
     border-radius: 0.375rem;
-    padding: 0 0.625rem;
+    padding: 0 4rem;
+    outline: none;
   }
 `;

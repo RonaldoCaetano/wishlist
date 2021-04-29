@@ -29,7 +29,6 @@ const GlobalStyles = createGlobalStyle`
   p,
   a {
     font-size: 2rem;
-    line-height: var(--medium)
   }
   a {
     color: var(--black);

@@ -1,5 +1,4 @@
 import React, { useCallback, useState, useEffect } from "react";
-
 import { Heart } from "@styled-icons/evaicons-solid";
 
 import * as S from "./styles";
@@ -38,7 +37,7 @@ const ProductCard = (props: ProductCardProps): React.ReactElement => {
   }, [getProductOnWishlist, productData, productData.sku]);
 
   return (
-    <S.ProductCardContainer data-testId="product-card-container">
+    <S.ProductCardContainer data-testid="product-card-container">
       <S.ProductCardContent>
         <S.WishlistButtonContainer>
           <S.WishlistButton onClick={handleProductOnWishlist}>
@@ -51,10 +50,10 @@ const ProductCard = (props: ProductCardProps): React.ReactElement => {
             alt={productData.title}
             width={150}
             height={150}
-            data-testId="product-card-image"
+            data-testid="product-card-image"
           />
-          <S.Name data-testId="product-card-name">{productData.title}</S.Name>
-          <S.Price data-testId="product-card-price">{productData.price}</S.Price>
+          <S.Name data-testid="product-card-name">{productData.title}</S.Name>
+          <S.Price data-testid="product-card-price">{productData.price}</S.Price>
         </S.ProductCardContentInfo>
       </S.ProductCardContent>
     </S.ProductCardContainer>

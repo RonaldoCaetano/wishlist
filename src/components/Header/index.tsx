@@ -1,7 +1,6 @@
 import React from "react";
-import { Pin, Phone, Heart } from "@styled-icons/evaicons-solid";
-
 import { Link } from "react-router-dom";
+import { Pin, Phone, Heart, Search } from "@styled-icons/evaicons-solid";
 
 import * as S from "./styles";
 
@@ -29,7 +28,10 @@ const Header = (): React.ReactElement => (
           </S.ServicesContent>
         </S.Services>
         <S.SearchBarContainer>
-          <input type="text" name="search-input" id="search-input" />
+          <span>
+            <Search size={20} />
+          </span>
+          <input type="text" name="search-input" id="search-input" placeholder="Buscar" />
         </S.SearchBarContainer>
       </S.SectionRight>
     </S.HeaderContent>
