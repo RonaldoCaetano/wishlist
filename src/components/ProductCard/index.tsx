@@ -53,7 +53,12 @@ const ProductCard = (props: ProductCardProps): React.ReactElement => {
             data-testid="product-card-image"
           />
           <S.Name data-testid="product-card-name">{productData.title}</S.Name>
-          <S.Price data-testid="product-card-price">{productData.price}</S.Price>
+          <S.Price data-testid="product-card-price">
+            {new Intl.NumberFormat([], {
+              style: "currency",
+              currency: "BRL"
+            }).format(productData.price)}
+          </S.Price>
         </S.ProductCardContentInfo>
       </S.ProductCardContent>
     </S.ProductCardContainer>
