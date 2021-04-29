@@ -38,7 +38,7 @@ const ProductCard = (props: ProductCardProps): React.ReactElement => {
   }, [getProductOnWishlist, productData, productData.sku]);
 
   return (
-    <S.ProductCardContainer>
+    <S.ProductCardContainer data-testId="product-card-container">
       <S.ProductCardContent>
         <S.WishlistButtonContainer>
           <S.WishlistButton onClick={handleProductOnWishlist}>
@@ -46,9 +46,15 @@ const ProductCard = (props: ProductCardProps): React.ReactElement => {
           </S.WishlistButton>
         </S.WishlistButtonContainer>
         <S.ProductCardContentInfo>
-          <img src={productData.image} alt={productData.title} width={150} height={150} />
-          <S.Name>{productData.title}</S.Name>
-          <S.Price>{productData.price}</S.Price>
+          <img
+            src={productData.image}
+            alt={productData.title}
+            width={150}
+            height={150}
+            data-testId="product-card-image"
+          />
+          <S.Name data-testId="product-card-name">{productData.title}</S.Name>
+          <S.Price data-testId="product-card-price">{productData.price}</S.Price>
         </S.ProductCardContentInfo>
       </S.ProductCardContent>
     </S.ProductCardContainer>

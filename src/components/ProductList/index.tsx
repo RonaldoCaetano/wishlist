@@ -31,6 +31,7 @@ const ProductList = ({ products }: ProductListProps): React.ReactElement => {
         .get<ProductsResponse>("https://run.mocky.io/v3/66063904-d43c-49ed-9329-d69ad44b885e")
         .then(({ data }) => {
           if (data?.products?.length) {
+            console.log(data.products);
             setProductsData(data.products);
           }
         });
@@ -38,7 +39,7 @@ const ProductList = ({ products }: ProductListProps): React.ReactElement => {
   }, [products]);
 
   return (
-    <S.ProductsContainer>
+    <S.ProductsContainer data-testid="products-list">
       {productsToShow.map((product, index) => (
         <ProductCard
           key={index}
