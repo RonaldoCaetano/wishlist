@@ -7,8 +7,8 @@ import Wishlist from "./pages/Wishlist";
 
 const App = (): React.ReactElement => (
   <>
-    <Header />
     <BrowserRouter>
+      <Header />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/wishlist" component={Wishlist} />

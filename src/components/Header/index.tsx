@@ -1,14 +1,16 @@
 import React from "react";
 import { Pin, Phone, Heart } from "@styled-icons/evaicons-solid";
 
+import { Link } from "react-router-dom";
+
 import * as S from "./styles";
 
 const Header = (): React.ReactElement => (
   <S.HeaderContainer>
     <S.HeaderContent>
-      <S.Section>
+      <S.SectionLeft>
         <S.ContainerTitle>MegaNets</S.ContainerTitle>
-      </S.Section>
+      </S.SectionLeft>
       <S.SectionRight>
         <S.Services>
           <S.ServicesContent>
@@ -22,7 +24,7 @@ const Header = (): React.ReactElement => (
             </S.ServicesTitle>
             <S.ServicesTitle>
               <Heart size={20} />
-              Lista de desejos
+              <Link to="/wishlist">Lista de desejos</Link>
             </S.ServicesTitle>
           </S.ServicesContent>
         </S.Services>

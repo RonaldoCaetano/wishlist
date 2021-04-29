@@ -26,15 +26,17 @@ export const HeaderContent = styled.div`
 
 export const ContainerTitle = styled.h1`
   font-size: 2rem;
-  margin: 20px 0;
+  color: #fff;
 `;
 
-export const Section = styled.section`
+export const SectionLeft = styled.section`
   display: flex;
+  width: 30%;
 `;
 
 export const SectionRight = styled.section`
   flex-direction: column;
+  width: 70%;
 `;
 
 export const Services = styled.div`
@@ -43,14 +45,26 @@ export const Services = styled.div`
 
 export const ServicesContent = styled.div`
   display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 0 0.675rem;
   min-width: 100%;
 `;
 
 export const ServicesTitle = styled.p`
-  font-size: 1rem;
-  line-height: normal;
+  font-size: 1.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  svg {
+    margin-right: 0.625rem;
+  }
 `;
 
 export const SearchBarContainer = styled.div`
